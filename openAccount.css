@@ -1,0 +1,61 @@
+body{
+  font-family:Arial, Helvetica, sans-serif!important;
+  overflow-x: hidden;
+}
+.linear{
+    background-image: linear-gradient(to right,blue,rgb(243, 69, 112));
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0; 
+    left: 0;
+    background-color: #EE5684;
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    opacity: 0.9;
+  }
+  .sidenav a {
+    /* color: white; */
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    background-color: white;
+    color: black !important;
+    border-radius: 400px 0px 0px 20px;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  .sidenav {
+    right: 0;
+  }
+  .con{
+    background-color:#EE5684;
+    width: 50px;
+    height: 50px;
+    padding-top: 8px;
+    padding-left: 9px;
+    border-radius: 10px;
+  }
+  .dii{
+      border: 1px solid;
+      width: 30px;
+      height: 6px;
+      border-radius: 30px;
+      background-color: white;
+      border: none;
+}

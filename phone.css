@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden !important;
+}
+.wlc,.name{
+    font-size: 10px;
+    margin-left: -30px;
+}
+.linear, .rounded{
+    width: 70vw !important;
+}
+.bb{
+    width: 10px !important;
+}
+.parent{
+    width: 90vw;
+}
+.bgg{
+    background-color: #EE5684;
+}
+.child{
+    display: flex;
+    gap: 30vw;
+}
+.home{
+    height: 180vh !important;
+    width: 320px !important;
+}
+input{
+    width: 70vw !important;
+}
+.btn{
+    width: 50vw !important;
+}
+.sign{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.round{
+    height: 37px;
+    width: 100px;
+    border-radius: 60px;
+    background-color: #EE5684;
+}
+.sel{
+    width: 69vw;
+}
+.mer{
+    margin-left: 22vw !important;    
+}
+.linear, .rounded{
+    width: 76vw;
+}
+.acc, .bal{
+    margin-top: 30px;
+    font-size: 13px;
+}
+.linear{
+    padding-left: -100px !important;
+}

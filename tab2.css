@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parent{
+    width: 80vw;
+}
+.child{
+    display: flex;
+    gap: 50vw;
+}
+input, .btn {
+    width: 70vw !important;
+}
+.sign{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.round{
+    height: 37px;
+    width: 100px;
+    border-radius: 60px;
+    background-color: #EE5684;
+}
+.sel{
+    width: 69vw;
+}
+.mer{
+    margin-left: 27vw !important;    
+}

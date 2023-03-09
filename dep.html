@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEPOSIT</title>
+    <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="openAccount.css">
+    
+</head>
+<body>
+    <nav class="sidebar close" >
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name" style="margin-left: -60px;"><img src="/images/bank-removebg-preview.png" width="40px" alt="">24/7 DIRECT BANK</span>
+                    <span class="profession">The Real Banking</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle' style="background: #EE5684 !important;">
+                <!-- <img src="/images/bank.PNG" width="23px"> -->
+            </i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu" style="margin-left: -30px;">
+
+                <li class="search-box" style="margin-left: 30px;">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="/openAccount.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" onclick="dep()">
+                        <a href="#">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Deposit</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-link">
+                        <a href="/transfer.html">
+                            <i class='bx icon'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                    <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+                                  </svg>
+                            </i>
+                            <span class="text nav-text">Transfer</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Pay Bills</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">History</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Buy Airtime</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="signUp1.html">
+                            <i class='bx bx-log-out icon' ></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="mode" style="margin-top: -10px;">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div> 
+                     <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home pt-2 ps-5">
+        <div class="">
+            <div>
+                <span class=""><img src="/images/bank-removebg-preview.png" width="30px"></span>
+              <span class="">24/7 Direct Banking</span>
+            </div><br>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 rounded shadow-lg pt-4 w-25 mx-auto text-center mt-5">
+                        <h3 style="color:#EE5684;">DEPOSIT</h3>
+                        <div id="error"></div>
+                        <input type="text" class="form-control text-center" placeholder="Amount" id="userAmount">
+        
+                        <input type="text" class="my-2 form-control text-center" placeholder="Enter pin here" id="userPassword">
+        
+                        <button class="btn btn-info my-1 w-100" onclick="dep()">DEPOSIT</button>
+                        <button class="btn btn-danger my-1 w-100 mb-3" onclick="backk()">BACK</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <script>
+       
+        
+        const dep = () => {
+            let userBal = JSON.parse(localStorage.getItem('EveryUsersDetails3'))
+            let getCorrectPass = JSON.parse(localStorage.getItem('EveryUsersDetails3'))
+            let userIndex = JSON.parse(localStorage.getItem('currentUser'))
+            userBal[userIndex].balance
+            getCorrectPass[userIndex].userDirectPin
+            console.log(getCorrectPass)
+            console.log(getCorrectPass[userIndex].userDirectPin)
+            
+            if(userAmount.value != "" && userPassword.value != ""){
+                if(userPassword.value !== getCorrectPass[userIndex].userDirectPin){
+                    alert("nooooooooo")
+                }else{
+                userBal[userIndex].balance += Number(userAmount.value)
+                localStorage.setItem('EveryUsersDetails3',JSON.stringify(userBal))
+
+               Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'success'
+                        )
+
+                        setTimeout(() => {
+                            
+                            window.location = `openAccount.html`
+                        }, 2000);
+            }
+        }else{
+            error.innerHTML = `<h5 class="text-danger">Fill the form correctly<h5>`
+
+                setTimeout(() => {
+                    error.innerHTML = ''
+                }, 2000);
+        }
+        }
+
+        const backk = () => {
+            window.location = `openAccount.html`
+        }
+
+        const body = document.querySelector('body'),
+        sidebar = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text");
+
+
+        toggle.addEventListener("click" , () =>{
+            sidebar.classList.toggle("close");
+        })
+
+        searchBtn.addEventListener("click" , () =>{
+            sidebar.classList.remove("close");
+        })
+
+        modeSwitch.addEventListener("click" , () =>{
+            body.classList.toggle("dark");
+            
+            if(body.classList.contains("dark")){
+                modeText.innerText = "Light mode";
+                body.style.color = `white`
+            }else{
+                body.style.color = `black`
+                modeText.innerText = "Dark mode";
+                
+            }
+        });
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
